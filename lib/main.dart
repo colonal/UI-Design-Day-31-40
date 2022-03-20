@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import '../day31/day_31_screen.dart';
+import 'custom_scroll_behavior.dart';
 import 'day32/day_32_screen.dart';
 import 'day33/day_33_screen.dart';
+import 'day34/day_34_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,6 +20,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       debugShowCheckedModeBanner: false,
+      scrollBehavior: MyCustomScrollBehavior(),
       home: const MyHomePage(),
     );
   }
@@ -56,6 +59,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () => Navigator.of(context).push(
                     MaterialPageRoute(builder: (_) => const Day33Screen())),
                 child: const Text("Day 33"),
+              ),
+              MaterialButton(
+                color: Colors.amber,
+                onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => const Day34Screen())),
+                child: const Text("Day 34"),
               )
             ],
           ),
