@@ -6,6 +6,7 @@ import 'day33/day_33_screen.dart';
 import 'day34/day_34_screen.dart';
 import 'day35/day_35_screen.dart';
 import 'day36/day_36_screen.dart';
+import 'day37/day_37_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -79,6 +80,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () => Navigator.of(context).push(
                     MaterialPageRoute(builder: (_) => const Day36Screen())),
                 child: const Text("Day 36"),
+              ),
+              MaterialButton(
+                color: Colors.amber,
+                onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => const Day37Screen())),
+                child: const Text("Day 37"),
               )
             ],
           ),
