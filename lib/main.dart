@@ -4,6 +4,8 @@ import 'custom_scroll_behavior.dart';
 import 'day32/day_32_screen.dart';
 import 'day33/day_33_screen.dart';
 import 'day34/day_34_screen.dart';
+import 'day35/day_35_screen.dart';
+import 'day36/day_36_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -65,6 +67,18 @@ class _MyHomePageState extends State<MyHomePage> {
                 onPressed: () => Navigator.of(context).push(
                     MaterialPageRoute(builder: (_) => const Day34Screen())),
                 child: const Text("Day 34"),
+              ),
+              MaterialButton(
+                color: Colors.amber,
+                onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => const Day35Screen())),
+                child: const Text("Day 35"),
+              ),
+              MaterialButton(
+                color: Colors.amber,
+                onPressed: () => Navigator.of(context).push(
+                    MaterialPageRoute(builder: (_) => const Day36Screen())),
+                child: const Text("Day 36"),
               )
             ],
           ),
