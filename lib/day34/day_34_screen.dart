@@ -71,7 +71,11 @@ class _Day34ScreenState extends State<Day34Screen> {
                         InkWell(
                           onTap: () {
                             setState(() {
-                              if (selectPage < images.length - 1) ++selectPage;
+                              if (selectPage < images.length - 1) {
+                                _pageController.animateToPage(++selectPage,
+                                    duration: const Duration(milliseconds: 500),
+                                    curve: Curves.linear);
+                              }
                             });
                           },
                           child: const CircleAvatar(

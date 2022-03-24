@@ -8,9 +8,7 @@ class API {
     List data = [];
     http.Response response;
     print("Get User");
-    final Map<String, String> header = {
-      "Authorization": "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"
-    };
+    final Map<String, String> header = {"Authorization": "XXXXXXXXXXXXXX"};
     try {
       response = await http.get(Uri.parse("https://api.github.com/users"),
           headers: header);
@@ -19,7 +17,9 @@ class API {
         data = jsonDecode(response.body);
         print("data: $data");
       }
-    } catch (e) {}
+    } catch (e) {
+      print("Api Error $e");
+    }
     return data;
   }
 }

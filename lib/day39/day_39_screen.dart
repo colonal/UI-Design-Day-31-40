@@ -37,7 +37,7 @@ class _Day39ScreenState extends State<Day39Screen> {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.7,
+              height: MediaQuery.of(context).size.height * 0.6,
               child: Center(
                 child: TweenAnimationBuilder(
                     duration: const Duration(milliseconds: 900),
@@ -61,6 +61,7 @@ class _Day39ScreenState extends State<Day39Screen> {
             ),
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.3,
+              width: double.infinity,
               child: TweenAnimationBuilder(
                   duration: const Duration(milliseconds: 500),
                   tween: Tween<Offset>(
@@ -87,7 +88,7 @@ class _Day39ScreenState extends State<Day39Screen> {
                                   const Text(
                                     'Discover the best \norganic asian tea.🔥',
                                     style: TextStyle(
-                                      fontSize: 24,
+                                      fontSize: 25,
                                       fontWeight: FontWeight.w600,
                                       color: Colors.black,
                                     ),
@@ -97,7 +98,7 @@ class _Day39ScreenState extends State<Day39Screen> {
                                     'Stright from motherland ⛰',
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                      fontSize: 14,
+                                      fontSize: 16,
                                       color: Colors.grey.shade600,
                                     ),
                                   ),
@@ -125,8 +126,9 @@ class _Day39ScreenState extends State<Day39Screen> {
                     return Transform.translate(
                       offset: value,
                       child: Container(
+                        height: MediaQuery.of(context).size.height,
                         padding: const EdgeInsets.symmetric(
-                            horizontal: 30, vertical: 20),
+                            horizontal: 30, vertical: 10),
                         decoration: const BoxDecoration(
                           color: Colors.white,
                           borderRadius: BorderRadius.only(

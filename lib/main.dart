@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ui_design_day_31_40/home/home_screen.dart';
 import '../day31/day_31_screen.dart';
 import 'custom_scroll_behavior.dart';
 import 'day32/day_32_screen.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       scrollBehavior: MyCustomScrollBehavior(),
-      home: const MyHomePage(),
+      home: const HomeScreen(),
     );
   }
 }
